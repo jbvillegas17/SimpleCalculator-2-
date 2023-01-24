@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JB CALCULATORe</title>
+      
+  </head>
+  <body>
+  
+    <script>
+ 
+const buttons = document.querySelectorAll("button");
+const display = document.querySelector("#display");
+
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener("click", function() {
+    if (this.id === "c") {
+      display.value = "";
+    } else if (this.id === "=") {
+      display.value = eval(display.value);
+    } else {
+      display.value += this.id;
+    }
+  });
+}
+</script>
+    <div class = "nav"></div>
+    <h2>CALCULATOR</h2>
+   
+    <div id="calculator">
+  <input type="text" id="display">
+  <br>
+  <button id="1">1</button>
+  <button id="2">2</button>
+  <button id="3">3</button>
+  <button id="+">+</button>
+  <br>
+  <button id="4">4</button>
+  <button id="5">5</button>
+  <button id="6">6</button>
+  <button id="-">-</button>
+  <br>
+  <button id="7">7</button>
+  <button id="8">8</button>
+  <button id="9">9</button>
+  <button id="*">*</button>
+  <br>
+  <button id="c">C</button>
+  <button id="0">0</button>
+  <button id="=">=</button>
+  <button id="/">/</button>
+</div>
+
+
+<style>
+body {
+  background-color: lightblue;
+  margin: 0;
+}
+.nav {
+  background-color: black;
+  width: 100%;
+  height: 80px;
+}
+h2 {
+  color: rgb(85,255,35);
+  text-align: center;
+  margin-top: -50px;
+  font-size: 30px;
+ 
+}
+
+#calculator {
+  width: 201px;
+  margin: 0 auto;
+  padding: 10px 4px;
+  border: 2px solid black;
+  margin-top: 150px;
+}
+button {
+  width: 47px;
+  height: 50px;
+  font-size: 20px;
+  background-color: green;
+}
+
+#display {
+  width: 196px;
+  height: 50px;
+  font-size: 20px;
+  border: 2px solid bla
+  </style>
+   </body>
+</html>
