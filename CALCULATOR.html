@@ -6,23 +6,7 @@
   </head>
   <body>
   
-    <script>
- 
-const buttons = document.querySelectorAll("button");
-const display = document.querySelector("#display");
 
-for (let i = 0; i < buttons.length; i++) {
-  buttons[i].addEventListener("click", function() {
-    if (this.id === "c") {
-      display.value = "";
-    } else if (this.id === "=") {
-      display.value = eval(display.value);
-    } else {
-      display.value += this.id;
-    }
-  });
-}
-</script>
     <div class = "nav"></div>
     <h2>CALCULATOR</h2>
    
@@ -87,7 +71,24 @@ button {
   width: 196px;
   height: 50px;
   font-size: 20px;
-  border: 2px solid bla
+}
   </style>
+      <script>
+ 
+        const buttons = document.querySelectorAll("button");
+        const display = document.querySelector("#display");
+        
+        for (let i = 0; i < buttons.length; i++) {
+          buttons[i].addEventListener("click", function() {
+            if (this.id === "c") {
+              display.value = "";
+            } else if (this.id === "=") {
+              display.value = eval(display.value);
+            } else {
+              display.value += this.id;
+            }
+          });
+        }
+        </script>
    </body>
 </html>
